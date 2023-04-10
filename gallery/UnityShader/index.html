@@ -15,6 +15,7 @@ images:
  - image_path: /gallery/UnityShader/light.png
    caption: Light
    copyright: © minisal
+videos:
  - image_path: /gallery/UnityShader/glass.mov
    caption: Glass
    copyright: © minisal
@@ -56,6 +57,30 @@ images:
 {% endfor %}
 
 			</div>
+
+<!-- Video Gallery __-->
+<div class="gallery masonry-gallery">
+
+  {% for video in page.videos %}  		
+  
+          <figure class="gallery-item">
+            <header class='gallery-icon'>
+  
+  <a href="{{ site.url }}{{ site.baseurl }}{{ videos.image_path }}" class="popup"  title="{{ videos.caption }}" data-caption="{{ videos.copyright }}">
+    <video src="{{ site.url }}{{ site.baseurl }}{{ imvideosage.image_path }}" controls></video> </a>
+
+            </header>	
+            <figcaption class='gallery-caption'>
+              <div class="entry-summary" id="{{ videos.caption }}">
+                <h3>{{videos.caption}}</h3>
+                <p>{{videos.copyright}}</p>
+              </div>
+            </figcaption>
+          </figure>
+          
+  {% endfor %}
+  
+        </div>
 
 		</div><!-- END .wrapper -->
 	</section>
