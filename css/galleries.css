@@ -91,7 +91,6 @@ body.gallerythumbsrevealed .position-absolute { -webkit-transform: translate3d(0
 .horizontal-gallery .gallery-item { display: inline-block; vertical-align: top; height: 100%; width: auto; margin: 0 .2em 0 0; }
 .horizontal-gallery .gallery-item:last-child { margin-right: 0; }
 .horizontal-gallery .gallery-icon { display: block; width: 100%; height: 100%; } 
-.horizontal-gallery .gallery-icon video { height: auto; width: 100%; }
 .horizontal-gallery .gallery-icon img { height: 98%; width: auto; max-width: 9999px; }
 .horizontal-gallery .gallery-caption { white-space: normal;  font-size: .85em; padding: 2em; }
 .horizontal-gallery .gallery-caption h3 { margin-bottom: .3em;  -webkit-transform: translate3d(-10px,0,0); transform: translate3d(-10px,0,0);  }
