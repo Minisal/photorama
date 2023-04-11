@@ -33,8 +33,14 @@ comments :
 
 # Internal nav
 nav:
-  - GALLERY: "https://Minisal.github.io/photorama/gallery/"  
-  - JOURNAL: "https://Minisal.github.io/photorama/journal/"
+  - PORTFOLIO: "https://Minisal.github.io/photorama/gallery/"  
+  - SHADER: "https://Minisal.github.io/photorama/gallery/"  
+  - HOUDINI: "https://Minisal.github.io/photorama/gallery/"  
+  - MIDJOURNEY: "https://Minisal.github.io/photorama/gallery/"  
+  - PAINTING: "https://Minisal.github.io/photorama/gallery/"  
+  - PHOTOGRAPHY: "https://Minisal.github.io/photorama/gallery/"  
+  - RESEARCH: "https://Minisal.github.io/photorama/gallery/"  
+ #  - JOURNAL: "https://Minisal.github.io/photorama/journal/"
   - ABOUT: "https://Minisal.github.io/photorama/about/"
 
 # All translation keys
