@@ -1,0 +1,123 @@
+---
+layout: page
+title: "Portfolio"
+description: "Making movies with unreal5"
+active: gallery
+header-img: "img/background/08.png"
+album-title: "Prototype"
+images:
+   - image_path: /gallery/UE5Movie/001.png
+   caption: 表情捕捉示例
+   - image_path: /gallery/UE5Movie/002.png
+   caption: 表情捕捉示例
+   - image_path: /gallery/UE5Movie/003.png
+   caption: 相机标定
+   - image_path: /gallery/UE5Movie/004.png
+   caption: 相机标定
+   - image_path: /gallery/UE5Movie/005.png
+   caption: 面部表情驱动
+   - image_path: /gallery/UE5Movie/006.png
+   caption: 人体姿态驱动
+   - image_path: /gallery/UE5Movie/007.png
+   caption: 人体骨骼绑定
+   - image_path: /gallery/UE5Movie/008.png
+   caption: 人体骨骼绑定
+   - image_path: /gallery/UE5Movie/009.png
+   caption: 人体姿态绑定
+   - image_path: /gallery/UE5Movie/010.png
+   caption: LED背景抠图
+   - image_path: /gallery/UE5Movie/011.png
+   caption: 人体动作驱动
+   - image_path: /gallery/UE5Movie/012.png
+   caption: 人体动作驱动
+   - image_path: /gallery/UE5Movie/013.png
+   caption: 面部模型
+   - image_path: /gallery/UE5Movie/014.png
+   caption: 头部模型
+   - image_path: /gallery/UE5Movie/016.png
+   caption: 头部模型
+   - image_path: /gallery/UE5Movie/015.png
+   caption: 人体模型
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>{{page.album-title}}</h2>
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary" id="{{ image.caption }}">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+
+<script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+         type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+image: {
+      titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    
+</body></html>
