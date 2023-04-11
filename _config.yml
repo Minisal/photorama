@@ -34,12 +34,12 @@ comments :
 # Internal nav
 nav:
   - PORTFOLIO: "https://Minisal.github.io/photorama/gallery/"  
-  - SHADER: "https://Minisal.github.io/photorama/gallery/"  
-  - HOUDINI: "https://Minisal.github.io/photorama/gallery/"  
-  - MIDJOURNEY: "https://Minisal.github.io/photorama/gallery/"  
-  - PAINTING: "https://Minisal.github.io/photorama/gallery/"  
-  - PHOTOGRAPHY: "https://Minisal.github.io/photorama/gallery/"  
-  - RESEARCH: "https://Minisal.github.io/photorama/gallery/"  
+  - SHADER: "https://Minisal.github.io/photorama/gallery/UnityShader"  
+  - HOUDINI: "https://Minisal.github.io/photorama/gallery/Houdini"  
+  - MIDJOURNEY: "https://Minisal.github.io/photorama/gallery/MidJourney"  
+  - PAINTING: "https://Minisal.github.io/photorama/gallery/Painting"  
+  - PHOTOGRAPHY: "https://Minisal.github.io/photorama/gallery/Photograph"  
+  - RESEARCH: "https://Minisal.github.io/photorama/gallery/Research"  
  #  - JOURNAL: "https://Minisal.github.io/photorama/journal/"
   - ABOUT: "https://Minisal.github.io/photorama/about/"
 
