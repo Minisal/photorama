@@ -17,27 +17,43 @@ videos:
 - image_path: /gallery/UnityShader/gray.mov
   caption: Toon
   copyright: © minisal
+  madedate: 2023-04-4
 - image_path: /gallery/UnityShader/water_wave.mov
   caption: Waving Water
   copyright: © minisal
+  madedate: 2023-04-5
 - image_path: /gallery/UnityShader/specular.mov
   caption: Metallic Pipeline
   copyright: © minisal
+  madedate: 2023-04-6
 - image_path: /gallery/UnityShader/glass.mov
   caption: Glass
   copyright: © minisal
+  madedate: 2023-04-7
 - image_path: /gallery/UnityShader/flower_multi_light.mov
   caption: Multi Light - Flower 
   copyright: © minisal
+  madedate: 2023-04-11
 - image_path: /gallery/UnityShader/snow.mov
   caption: Snow
   copyright: © minisal
+  madedate: 2023-04-2
 - image_path: /gallery/UnityShader/star_multi_light.mov
   caption: Multi Light - Star 
   copyright: © minisal
+  madedate: 2023-04-11
 - image_path: /gallery/UnityShader/sin.mov
   caption: Post Processing
   copyright: © minisal
+  madedate: 2023-04-10
+- image_path: /gallery/UnityShader/shiny.mov
+  caption: Shiny
+  copyright: © minisal
+  madedate: 2023-04-12
+- image_path: /gallery/UnityShader/reflect_probe.mov
+  caption: Reflect_Probe
+  copyright: © minisal
+  madedate: 2023-04-12
 ---
 
 <html class="no-js" lang="en">
@@ -61,7 +77,7 @@ videos:
 				<figure class="gallery-item">
 					<header class='gallery-icon'>
 
-<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }} {{image.madedate}}">
 <img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
 						
 					</header>	
@@ -69,6 +85,7 @@ videos:
 						<div class="entry-summary" id="{{ image.caption }}">
 							<h3>{{image.caption}}</h3>
 							<p>{{image.copyright}}</p>
+              <p>{{image.madedate}}</p>
 						</div>
 					</figcaption>
 				</figure>
