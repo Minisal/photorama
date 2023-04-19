@@ -34,9 +34,9 @@ comments :
 # Internal nav
 nav:
   - PORTFOLIO: "https://Minisal.github.io/photorama/gallery/"  
+  - AICG: "https://Minisal.github.io/photorama/gallery/MidJourney"  
   - SHADERS: "https://Minisal.github.io/photorama/gallery/UnityShader"  
   - HOUDINI: "https://Minisal.github.io/photorama/gallery/Houdini"  
-  - MIDJOURNEY: "https://Minisal.github.io/photorama/gallery/MidJourney"  
   - PAINTING: "https://Minisal.github.io/photorama/gallery/Painting"  
   - PHOTOGRAPHY: "https://Minisal.github.io/photorama/gallery/Photograph"  
   - UE5FILM: "https://Minisal.github.io/photorama/gallery/UE5Movie"  
