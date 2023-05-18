@@ -3,7 +3,7 @@ layout: page
 title: "Research"
 description: "CV & CG"
 active: gallery
-header-img: "img/background/01.png"
+header-img: "img/background/03.png"
 album-title: "Research"
 images:
  - image_path: /gallery/Research/cerf_model.png
@@ -38,6 +38,31 @@ adap_images:
 		<div class="wrapper">
 	<br><br>
 			<h2>CeRF</h2>
+      <p>
+        Convolutional Neural Radiance Fields for New View Synthesis with
+          Derivatives of Ray Modeling
+                </p>
+      <p>
+        Submit to Neurips 2023 - First author
+                </p>
+                <p>
+                  In recent years, novel view synthesis has gained popularity in
+                  generating high-fidelity images. While demonstrating superior
+                  performance in the task of synthesizing novel views, the majority of
+                  these methods are still based on the conventional multi-layer perceptron
+                  for scene embedding. Furthermore, light field models suffer from
+                  geometric blurring during pixel rendering, while radiance field-based
+                  volume rendering methods have multiple solutions for a certain target of
+                  density distribution integration. To address these issues, we introduce
+                  the Convolutional Neural Radiance Fields to model the derivatives of
+                  radiance along rays. Based on 1D convolutional operations, our proposed
+                  method effectively extracts potential ray representations through a
+                  structured neural network architecture. Besides, with the proposed ray
+                  modeling, a proposed recurrent module is employed to solve geometric
+                  ambiguity in the fully neural rendering process. Extensive experiments
+                  demonstrate the promising results of our proposed model compared with
+                  existing state-of-the-art methods.
+                  </p>
 
 
 			<!-- Gallery __-->
@@ -69,6 +94,21 @@ adap_images:
   <div class="wrapper">
 	<br><br>
 			<h2>AdapMVSNet</h2>
+      <p>
+        Efficient Multi-View Stereo with Adaptive Convolution and
+          Attention Fusion
+                </p>
+      <p>
+        Submit to CAD&CG 2023 - Second author
+                </p>
+                <p>
+Multi-View Stereo is a crucial technique for reconstructing the geometric structure of a scene, given the known camera parameters. Previous deep learning-based MVS methods have mainly focused on improving the reconstruction quality but overlooked the running efficiency during the actual algorithm deployment. 
+For example, deformable convolutions have been introduced to improve the accuracy of the reconstruction results further, however, its inability for parallel optimization caused low inference speed.
+In this paper, we propose AdaptMVSNet which is device-friendly and reconstruction-efficient, while preserving the original results. 
+To this end, adaptive convolution is introduced to significantly improve the efficiency in speed and metrics compared to current methods.
+In addition, an attention fusion module is proposed to blend features from adaptive convolution and the feature pyramid network. 
+Our experiments demonstrate that our proposed approach achieves state-of-the-art performance and is almost 2$\times$ faster than the recent fastest MVS method.
+                </p>
 
 
 			<!-- Gallery __-->
