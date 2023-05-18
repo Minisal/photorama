@@ -7,23 +7,23 @@ header-img: "img/background/03.png"
 album-title: "Results"
 images:
   - image_path: /gallery/Research/cerf_model.png
-    caption: Cerf - Model
+    caption: Model
     copyright: © minisal
   - image_path: /gallery/Research/cerf_network.png
-    caption: Cerf - Network
+    caption: Network
     copyright: © minisal
   - image_path: /gallery/Research/cerf_results.png
-    caption: Cerf - Results
+    caption: Results
     copyright: © minisal
 adap_images:
 	- image_path: /gallery/Research/adap_network.png
-	  caption: AdapMVSNet - Overview
+	  caption: Overview
 	  copyright: © minisal
 	- image_path: /gallery/Research/adap_model.png
-	  caption: AdapMVSNet - Module
+	  caption: Module
 	  copyright: © minisal
 	- image_path: /gallery/Research/adap_results.png
-	  caption: AdapMVSNet - Results
+	  caption: Results
 	  copyright: © minisal
 videos:
   - image_path: /gallery/Research/recon_demo.mov
@@ -68,31 +68,7 @@ videos:
                   </p>
 
         <!-- Gallery __-->
-        <div class="gallery masonry-gallery">
-          {% for image in page.images %}
 
-          <figure class="gallery-item">
-            <header class="gallery-icon">
-              <a
-                href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"
-                class="popup"
-                title="{{ image.caption }}"
-                data-caption="{{ image.copyright }}"
-              >
-                <img
-                  src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"
-              /></a>
-            </header>
-            <figcaption class="gallery-caption">
-              <div class="entry-summary">
-                <h3>{{image.caption}}</h3>
-                <p>{{image.copyright}}</p>
-              </div>
-            </figcaption>
-          </figure>
-
-          {% endfor %}
-        </div>
       </div>
       <!-- END .wrapper -->
 
@@ -105,31 +81,7 @@ videos:
         
 
         <!-- Gallery __-->
-        <div class="gallery masonry-gallery">
-          {% for image in page.adap_images %}
 
-          <figure class="gallery-item">
-            <header class="gallery-icon">
-              <a
-                href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"
-                class="popup"
-                title="{{ image.caption }}"
-                data-caption="{{ image.copyright }}"
-              >
-                <img
-                  src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"
-              /></a>
-            </header>
-            <figcaption class="gallery-caption">
-              <div class="entry-summary" id="{{ image.caption }}">
-                <h3>{{image.caption}}</h3>
-                <p>{{image.copyright}}</p>
-              </div>
-            </figcaption>
-          </figure>
-
-          {% endfor %}
-        </div>
       </div>
       <!-- END .wrapper -->
 
@@ -137,27 +89,7 @@ videos:
         <br /><br />
         <h2>Realtime 3D Reconstruction</h2>
 
-        <!-- Gallery __-->
-        <div class="gallery masonry-gallery">
-          {% for image in page.videos %}
 
-          <figure class="gallery-item">
-            <header class="gallery-icon">
-              <video
-                src="{{ site.url }}{{ site.baseurl }}{{ video.image_path }}"
-                controls
-              ></video>
-            </header>
-            <figcaption class="gallery-caption">
-              <div class="entry-summary" id="{{ image.caption }}">
-                <h3>{{image.caption}}</h3>
-                <p>{{image.copyright}}</p>
-              </div>
-            </figcaption>
-          </figure>
-
-          {% endfor %}
-        </div>
       </div>
       <!-- END .wrapper -->
       <h2>Nerf & MVS Presentation</h2>
