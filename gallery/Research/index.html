@@ -15,7 +15,6 @@ images:
   - image_path: /gallery/Research/cerf_results.png
     caption: Cerf - Results
     copyright: © minisal
-
 adap_images:
 	- image_path: /gallery/Research/adap_network.png
 	  caption: AdapMVSNet - Overview
@@ -26,7 +25,6 @@ adap_images:
 	- image_path: /gallery/Research/adap_results.png
 	  caption: AdapMVSNet - Results
 	  copyright: © minisal
-
 videos:
   - image_path: /gallery/Research/recon_demo.mov
     caption: Realtime Recon
@@ -42,12 +40,12 @@ videos:
     <section id="content" role="main">
       <div class="wrapper">
         <br>
-		<br>
+        <br>
         <h2>
           CeRF: Convolutional Neural Radiance Fields for New View Synthesis with
           Derivatives of Ray Modeling
         </h2>
-		Submit to Neurips 2023, First author 
+        Submit to Neurips 2023, First author
         <br>
         In recent years, novel view synthesis has gained popularity in
         generating high-fidelity images. While demonstrating superior
@@ -99,8 +97,8 @@ videos:
           AdaptMVSNet: Efficient Multi-View Stereo with Adaptive Convolution and
           Attention Fusion - submit to CAD&CG 2023
         </h2>
-		<br>
-		Second author, submit to CAD&CG 2023
+        <br>
+        Submit to CAD&CG 2023, Second author
         <br>
         Multi-View Stereo is a crucial technique for reconstructing the
         geometric structure of a scene, given the known camera parameters.
@@ -121,30 +119,30 @@ videos:
         <br>
         <br>
         <br>
-		<!-- Gallery __-->
+        <!-- Gallery __-->
         <div class="gallery masonry-gallery">
-			{% for image in page.adap_images %}
-			<figure class="gallery-item">
-			  <header class="gallery-icon">
-				<a
-				  href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"
-				  class="popup"
-				  title="{{ image.caption }}"
-				  data-caption="{{ image.copyright }}"
-				>
-				  <img
-					src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"
-				/></a>
-			  </header>
-			  <figcaption class="gallery-caption">
-				<div class="entry-summary">
-				  <h3>{{image.caption}}</h3>
-				  <p>{{image.copyright}}</p>
-				</div>
-			  </figcaption>
-			</figure>
-			{% endfor %}
-		  </div>
+          {% for image in page.adap_images %}
+          <figure class="gallery-item">
+            <header class="gallery-icon">
+              <a
+                href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"
+                class="popup"
+                title="{{ image.caption }}"
+                data-caption="{{ image.copyright }}"
+              >
+                <img
+                  src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"
+              /></a>
+            </header>
+            <figcaption class="gallery-caption">
+              <div class="entry-summary">
+                <h3>{{image.caption}}</h3>
+                <p>{{image.copyright}}</p>
+              </div>
+            </figcaption>
+          </figure>
+          {% endfor %}
+        </div>
 
         <h2>Nerf & MVS Presentation</h2>
         <iframe
