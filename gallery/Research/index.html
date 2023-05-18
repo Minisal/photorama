@@ -6,125 +6,222 @@ active: gallery
 header-img: "img/background/03.png"
 album-title: "Results"
 images:
- - image_path: /gallery/Research/cerf_model.png
-   caption: Cerf - Model
-   copyright: © minisal
- - image_path: /gallery/Research/cerf_network.png
-   caption: Cerf - Network
-   copyright: © minisal
- - image_path: /gallery/Research/cerf_results.png
-   caption: Cerf - Rendering Results
-   copyright: © minisal
- - image_path: /gallery/Research/cerf_mesh.png
-   caption: Cerf - Reconstructed Mesh
-   copyright: © minisal
+  - image_path: /gallery/Research/cerf_model.png
+    caption: Cerf - Model
+    copyright: © minisal
+  - image_path: /gallery/Research/cerf_network.png
+    caption: Cerf - Network
+    copyright: © minisal
+  - image_path: /gallery/Research/cerf_results.png
+    caption: Cerf - Results
+    copyright: © minisal
+
+adap_images:
+	- image_path: /gallery/Research/adap_network.png
+	  caption: AdapMVSNet - Overview
+	  copyright: © minisal
+	- image_path: /gallery/Research/adap_model.png
+	  caption: AdapMVSNet - Module
+	  copyright: © minisal
+	- image_path: /gallery/Research/adap_results.png
+	  caption: AdapMVSNet - Results
+	  copyright: © minisal
 
 videos:
- - image_path: /gallery/Research/recon_demo.mov
-   caption: Realtime Recon
-   copyright: © minisal
+  - image_path: /gallery/Research/recon_demo.mov
+    caption: Realtime Recon
+    copyright: © minisal
 ---
 
 <html class="no-js" lang="en">
-<head>
-	<meta content="charset=utf-8">
-</head>
+  <head>
+    <meta content="charset=utf-8" />
+  </head>
 
-    <body>
- 
-	<section id="content" role="main">
-		<div class="wrapper">
-	<br><br>
-			<h2>CeRF</h2>
+  <body>
+    <section id="content" role="main">
+      <div class="wrapper">
+        <br>
+		<br>
+        <h2>
+          CeRF: Convolutional Neural Radiance Fields for New View Synthesis with
+          Derivatives of Ray Modeling
+        </h2>
+		Submit to Neurips 2023, First author 
+        <br>
+        In recent years, novel view synthesis has gained popularity in
+        generating high-fidelity images. While demonstrating superior
+        performance in the task of synthesizing novel views, the majority of
+        these methods are still based on the conventional multi-layer perceptron
+        for scene embedding. Furthermore, light field models suffer from
+        geometric blurring during pixel rendering, while radiance field-based
+        volume rendering methods have multiple solutions for a certain target of
+        density distribution integration. To address these issues, we introduce
+        the Convolutional Neural Radiance Fields to model the derivatives of
+        radiance along rays. Based on 1D convolutional operations, our proposed
+        method effectively extracts potential ray representations through a
+        structured neural network architecture. Besides, with the proposed ray
+        modeling, a proposed recurrent module is employed to solve geometric
+        ambiguity in the fully neural rendering process. Extensive experiments
+        demonstrate the promising results of our proposed model compared with
+        existing state-of-the-art methods.
+        <br>
+        <br>
+        <br>
+        <!-- Gallery __-->
+        <div class="gallery masonry-gallery">
+          {% for image in page.images %}
 
+          <figure class="gallery-item">
+            <header class="gallery-icon">
+              <a
+                href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"
+                class="popup"
+                title="{{ image.caption }}"
+                data-caption="{{ image.copyright }}"
+              >
+                <img
+                  src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"
+              /></a>
+            </header>
+            <figcaption class="gallery-caption">
+              <div class="entry-summary">
+                <h3>{{image.caption}}</h3>
+                <p>{{image.copyright}}</p>
+              </div>
+            </figcaption>
+          </figure>
 
-			<!-- Gallery __-->
-			<div class="gallery masonry-gallery">
-		
-{% for image in page.images %}  		
+          {% endfor %}
+        </div>
 
-				<figure class="gallery-item">
-					<header class='gallery-icon'>
-
-<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
-<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
-						
-					</header>	
-					<figcaption class='gallery-caption'>
-						<div class="entry-summary">
-							<h3>{{image.caption}}</h3>
-							<p>{{image.copyright}}</p>
-						</div>
-					</figcaption>
-				</figure>
-				
-{% endfor %}
-
-			</div>
-
-			<h2>Nerf & MVS Presentation</h2>
-			<iframe src="//player.bilibili.com/player.html?aid=270220311&bvid=BV1pc411H7J5&cid=1102401229&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" controls style="width: 100%;"> </iframe>
-			<h2>Realtime 3D Recon</h2>
-			<!-- Video Gallery __-->
-<div class="gallery masonry-gallery">
-
-	{% for video in page.videos %}  		
-	
+        <h2>
+          AdaptMVSNet: Efficient Multi-View Stereo with Adaptive Convolution and
+          Attention Fusion - submit to CAD&CG 2023
+        </h2>
+		<br>
+		Second author, submit to CAD&CG 2023
+        <br>
+        Multi-View Stereo is a crucial technique for reconstructing the
+        geometric structure of a scene, given the known camera parameters.
+        Previous deep learning-based MVS methods have mainly focused on
+        improving the reconstruction quality but overlooked the running
+        efficiency during the actual algorithm deployment. For example,
+        deformable convolutions have been introduced to improve the accuracy of
+        the reconstruction results further, however, its inability for parallel
+        optimization caused low inference speed. In this paper, we propose
+        AdaptMVSNet which is device-friendly and reconstruction-efficient, while
+        preserving the original results. To this end, adaptive convolution is
+        introduced to significantly improve the efficiency in speed and metrics
+        compared to current methods. In addition, an attention fusion module is
+        proposed to blend features from adaptive convolution and the feature
+        pyramid network. Our experiments demonstrate that our proposed approach
+        achieves state-of-the-art performance and is almost 2$\times$ faster
+        than the recent fastest MVS method.
+        <br>
+        <br>
+        <br>
+		<!-- Gallery __-->
+        <div class="gallery masonry-gallery">
+			{% for image in page.adap_images %}
 			<figure class="gallery-item">
-			  <header class='gallery-icon'>
-	  <video src="{{ site.url }}{{ site.baseurl }}{{ video.image_path }}" controls style="width: 50%; height: 50%;"></video> 
-			  </header>	
-			  <figcaption class='gallery-caption'>
-				<div class="entry-summary" id="{{ video.caption }}">
-				  <h3>{{video.caption}}</h3>
-				  <p>{{video.copyright}}</p>
+			  <header class="gallery-icon">
+				<a
+				  href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"
+				  class="popup"
+				  title="{{ image.caption }}"
+				  data-caption="{{ image.copyright }}"
+				>
+				  <img
+					src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"
+				/></a>
+			  </header>
+			  <figcaption class="gallery-caption">
+				<div class="entry-summary">
+				  <h3>{{image.caption}}</h3>
+				  <p>{{image.copyright}}</p>
 				</div>
 			  </figcaption>
 			</figure>
-			
-	{% endfor %}
-	
+			{% endfor %}
 		  </div>
 
-		</div><!-- END .wrapper -->
-	</section>
+        <h2>Nerf & MVS Presentation</h2>
+        <iframe
+          src="//player.bilibili.com/player.html?aid=270220311&bvid=BV1pc411H7J5&cid=1102401229&page=1"
+          scrolling="no"
+          border="0"
+          frameborder="no"
+          framespacing="0"
+          allowfullscreen="true"
+          controls
+          style="width: 30%; height: 30%"
+        >
+        </iframe>
+        <h2>Realtime 3D Reconstruction</h2>
+        <!-- Video Gallery __-->
+        <div class="gallery masonry-gallery">
+          {% for video in page.videos %}
+          <figure class="gallery-item">
+            <header class="gallery-icon">
+              <video
+                src="{{ site.url }}{{ site.baseurl }}{{ video.image_path }}"
+                controls
+                style="width: 100%; height: 100%"
+              ></video>
+            </header>
+            <figcaption class="gallery-caption">
+              <div class="entry-summary" id="{{ video.caption }}">
+                <h3>{{video.caption}}</h3>
+                <p>{{video.copyright}}</p>
+              </div>
+            </figcaption>
+          </figure>
 
-<!-- jQuery -->    
+          {% endfor %}
+        </div>
+      </div>
+      <!-- END .wrapper -->
+    </section>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<!-- include image popups -->
-<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
-<script src="{{ site.baseurl }}/js/retina.min.js"></script>
-<!-- include Masonry -->
-<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
-<!-- include mousewheel plugins -->
-<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
-<!-- include carousel plugins -->
-<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
-<!-- include svg line drawing plugin -->
-<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
-<!-- include custom script -->
-<script src="{{ site.baseurl }}/js/scripts.js"></script>
-<!-- Modernizr -->
- <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+    <!-- jQuery -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- include image popups -->
+    <script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+    <script src="{{ site.baseurl }}/js/retina.min.js"></script>
+    <!-- include Masonry -->
+    <script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script>
+    <!-- include mousewheel plugins -->
+    <script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+    <!-- include carousel plugins -->
+    <script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+    <!-- include svg line drawing plugin -->
+    <script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+    <!-- include custom script -->
+    <script src="{{ site.baseurl }}/js/scripts.js"></script>
+    <!-- Modernizr -->
+    <script src="{{ site.baseurl }}/js/modernizr.js"></script>
 
     <script type="text/javascript">
-      $(document).ready(function($) {
-        $('a.popup').magnificPopup({
-          type: 'image',
-	  gallery:{
-         enabled:true,
-         navigateByImgClick: true,
-         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-       },
-      image: {
-         titleSrc: function(item) {
-              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
-            }
-        }
+      $(document).ready(function ($) {
+        $("a.popup").magnificPopup({
+          type: "image",
+          gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
+          },
+          image: {
+            titleSrc: function (item) {
+              return (
+                item.el.attr("title") + "&nbsp;" + item.el.attr("data-caption")
+              );
+            },
+          },
           // other options
+        });
       });
-});
     </script>
-
-</body></html>
+  </body>
+</html>
