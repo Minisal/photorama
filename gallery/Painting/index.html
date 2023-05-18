@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Portfolio"
-description: "painting"
+description: "Artwork"
 active: gallery
 header-img: "img/background/01.png"
 album-title: "Painting"
@@ -29,6 +29,13 @@ images:
    copyright: © minisal
  - image_path: /gallery/Painting/field.png
    caption: Field
+   copyright: © minisal
+houdini_images:
+ - image_path: /gallery/Houdini/fluid.jpg
+   caption: Color Fluid
+   copyright: © minisal
+ - image_path: /gallery/Houdini/fluid_nodes.png
+   caption: Color Fluid Nodes
    copyright: © minisal
 ---
 
@@ -59,6 +66,37 @@ images:
 					</header>	
 					<figcaption class='gallery-caption'>
 						<div class="entry-summary">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+
+  <div class="wrapper">
+	<br><br>
+			<h2>Houdini</h2>
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.houdini_images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary" id="{{ image.caption }}">
 							<h3>{{image.caption}}</h3>
 							<p>{{image.copyright}}</p>
 						</div>
