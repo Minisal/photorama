@@ -105,31 +105,23 @@ images_sd:
     <body>
  
 	<section id="content" role="main">
+        <h2>AIGC+</h2>
+
+        <figure class="gallery-item">
+            <header class='gallery-icon'>
+                <video src="{{ site.url }}{{ site.baseurl }}/gallery/MidJourney/FishGirl.mov" autoplay loop controls style="width: 100%;"></video>
+            </header>
+            <figcaption class='gallery-caption'>
+                <div class="entry-summary" id="recon_demo">
+                    <h3>Recon Demo</h3>
+                    <p> © minisal </p>
+                </div>
+            </figcaption>
+        </figure>
+
 		<div class="wrapper">
     <br><br>
-    <h2>AIGC+</h2>
 
-
-        <!-- Gallery __-->
-        <div class="gallery masonry-gallery">
-      
-  {% for video in page.videos %}  		
-  
-          <figure class="gallery-item">
-            <header class='gallery-icon'>
-    <video src="{{ site.url }}{{ site.baseurl }}{{ video.image_path }}" autoplay loop controls style="width: 100%;"></video> 
-            </header>	
-            <figcaption class='gallery-caption'>
-              <div class="entry-summary" id="{{ video.caption }}">
-                <h3>{{video.caption}}</h3>
-                <p>{{video.copyright}} {{video.madedate}}</p>
-              </div>
-            </figcaption>
-          </figure>
-          
-  {% endfor %}
-
-        </div>
 
 
 			<h2>Stable Diffusion</h2>
