@@ -15,22 +15,6 @@ images:
  - image_path: /gallery/Research/cerf_results.png
    caption: Results
    copyright: © minisal
-cerf_videos:
-   - image_path: /gallery/Research/compare_with_sota_coffee.mp4
-   caption: coffee
-   copyright: © minisal
-   - image_path: /gallery/Research/compare_with_sota_drums.mp4
-   caption: drums
-   copyright: © minisal
-   - image_path: /gallery/Research/compare_with_sota_ficus.mp4
-   caption: ficus
-   copyright: © minisal
-   - image_path: /gallery/Research/compare_with_sota_toaster.mp4
-   caption: toaster
-   copyright: © minisal
-   - image_path: /gallery/Research/ablation.mp4
-   caption: Ablation
-   copyright: © minisal
 adap_images:
  - image_path: /gallery/Research/adap_model.png
    caption: Module
@@ -88,8 +72,10 @@ adap_images:
 
 				<figure class="gallery-item">
 					<header class='gallery-icon'>
-                    <a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
-                    <img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+
 					</header>	
 					<figcaption class='gallery-caption'>
 						<div class="entry-summary">
@@ -102,26 +88,6 @@ adap_images:
 {% endfor %}
 
 			</div>
-
-<!--            <div class="gallery masonry-gallery">-->
-
-<!--                {% for video in page.cerf_videos %}-->
-
-<!--                <figure class="gallery-item">-->
-<!--                    <header class='gallery-icon'>-->
-<!--                        <video src="{{ site.url }}{{ site.baseurl }}{{ video.image_path }}" autoplay loop controls style="width: 30%;"></video>-->
-<!--                    </header>-->
-<!--                    <figcaption class='gallery-caption'>-->
-<!--                        <div class="entry-summary" id="{{ video.caption }}">-->
-<!--                            <h3>{{video.caption}}</h3>-->
-<!--                            <p>{{video.copyright}}</p>-->
-<!--                        </div>-->
-<!--                    </figcaption>-->
-<!--                </figure>-->
-
-<!--                {% endfor %}-->
-
-<!--            </div>-->
 
 		</div><!-- END .wrapper -->
 
