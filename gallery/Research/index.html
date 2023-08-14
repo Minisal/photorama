@@ -25,6 +25,16 @@ adap_images:
  - image_path: /gallery/Research/adap_results.png
    caption: Results
    copyright: © minisal
+anydoor_images:
+- image_path: /gallery/Research/anydoor_teaser.png
+caption: Teasor
+copyright: © minisal
+- image_path: /gallery/Research/anydoor_results_vis.png
+caption: Quality Results
+copyright: © minisal
+- image_path: /gallery/Research/anydoor_results.png
+caption: Quantity Results
+copyright: © minisal
 ---
 
 <html class="no-js" lang="en">
@@ -97,7 +107,63 @@ adap_images:
 
 		</div><!-- END .wrapper -->
 
-  <div class="wrapper">
+        <div class="wrapper">
+            <br><br>
+            <h2>AnyDoor-NeRF</h2>
+            <h2>
+                An Efficient and Hierarchical Framework for Large Extended Indoor Scene
+            </h2>
+            <p>
+                Submit to 3DV 2024 - First author
+          <span class="fa-stack fa-lg">
+             <i class="fa fa-circle fa-stack-2x"></i>
+             <i class="fa fa-file-pdf fa-stack-1x fa-inverse"></i>
+          </span>
+                </a>
+            </p>
+            <p>
+                Neural implicit representations have made significant advancements in rendering new views.
+                However, the dynamic loading of NeRF has remained less explored.
+                Despite the tremendous practical benefits, loading large scenes poses a grand challenge to
+                efficient scene representation and memory requirements.
+                In this paper, we propose a novel framework named AnyDoor-NeRF for the dynamic loading of
+                large extended indoor scenes. Specifically, we introduce a hierarchical sparse voxel representation
+                to model the scenes. With such an adaptive design, our method is able to partition large scenes
+                into different levels for fast modeling with less memory cost. Furthermore, the partitioned scene
+                can be dynamically loaded and joined for a better immersive experience.
+                Quantitative and qualitative results on the ScanNet datasets show the effectiveness of AnyDoor-NeRF,
+                which requires only about 5% training steps and about 70% GPU memory cost compared with NeRFusion.
+            </p>
+
+
+            <!-- Gallery __-->
+            <div class="gallery masonry-gallery">
+
+                {% for image in page.anydoor_images %}
+
+                <figure class="gallery-item">
+                    <header class='gallery-icon'>
+
+                        <a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+                            <img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+
+                    </header>
+                    <figcaption class='gallery-caption'>
+                        <div class="entry-summary">
+                            <h3>{{image.caption}}</h3>
+                            <p>{{image.copyright}}</p>
+                        </div>
+                    </figcaption>
+                </figure>
+
+                {% endfor %}
+
+            </div>
+
+        </div><!-- END .wrapper -->
+
+
+        <div class="wrapper">
 	<br><br>
 			<h2>AdapMVSNet</h2>
       <h2>
