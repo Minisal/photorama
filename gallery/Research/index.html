@@ -15,6 +15,16 @@ images:
  - image_path: /gallery/Research/cerf_results.png
    caption: Results
    copyright: © minisal
+cerf_demo:
+ - image_path: /gallery/Research/demo/compare_with_sota_coffee.mov
+   caption: Coffee
+   copyright: © minisal
+ - image_path: /gallery/Research/demo/compare_with_sota_drums.mov
+   caption: Drums
+   copyright: © minisal
+ - image_path: /gallery/Research/demo/compare_with_sota_toaster.mov
+   caption: Toaster
+   copyright: © minisal
 adap_images:
  - image_path: /gallery/Research/adap_model.png
    caption: Module
@@ -34,6 +44,13 @@ anydoor_images:
    copyright: © minisal
  - image_path: /gallery/Research/anydoor_results.png
    caption: Quantity Results
+   copyright: © minisal
+anydoor_demo:
+ - image_path: /gallery/Research/demo/demo_load_v2.mov
+   caption: Dynamic Loading
+   copyright: © minisal
+ - image_path: /gallery/Research/demo/demo_results_v2.mov
+   caption: Demo
    copyright: © minisal
 ---
 
@@ -103,19 +120,18 @@ anydoor_images:
 				</figure>
 
 {% endfor %}
-                {% for image in page.images %}
+                {% for video in page.cerf_demo %}
 
                 <figure class="gallery-item">
                     <header class='gallery-icon'>
 
-                        <a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
-                            <img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+                        <video src="{{ site.url }}{{ site.baseurl }}{{ video.image_path }}" autoplay loop controls style="width: 100%;"></video>
 
                     </header>
                     <figcaption class='gallery-caption'>
                         <div class="entry-summary">
-                            <h3>{{image.caption}}</h3>
-                            <p>{{image.copyright}}</p>
+                            <h3>{{video.caption}}</h3>
+                            <p>{{video.copyright}}</p>
                         </div>
                     </figcaption>
                 </figure>
@@ -171,6 +187,25 @@ anydoor_images:
                 </figure>
 
                 {% endfor %}
+                {% for image in page.anydoor_demo %}
+
+                <figure class="gallery-item">
+                    <header class='gallery-icon'>
+
+                        <video src="{{ site.url }}{{ site.baseurl }}{{ video.image_path }}" autoplay loop controls style="width: 100%;"></video>
+
+                    </header>
+                    <figcaption class='gallery-caption'>
+                        <div class="entry-summary">
+                            <h3>{{video.caption}}</h3>
+                            <p>{{video.copyright}}</p>
+                        </div>
+                    </figcaption>
+                </figure>
+
+                {% endfor %}
+
+
 
             </div>
 
