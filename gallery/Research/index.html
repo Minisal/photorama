@@ -6,246 +6,234 @@ active: gallery
 header-img: "img/background/03.png"
 album-title: "Research"
 images:
-- image_path: /gallery/Research/cerf_model.png
-caption: Model
-copyright: © minisal
-- image_path: /gallery/Research/cerf_network.png
-caption: Network
-copyright: © minisal
-- image_path: /gallery/Research/cerf_results.png
-caption: Results
-copyright: © minisal
+ - image_path: /gallery/Research/cerf_model.png
+   caption: Model
+   copyright: © minisal
+ - image_path: /gallery/Research/cerf_network.png
+   caption: Network
+   copyright: © minisal
+ - image_path: /gallery/Research/cerf_results.png
+   caption: Results
+   copyright: © minisal
 adap_images:
-- image_path: /gallery/Research/adap_model.png
-caption: Module
-copyright: © minisal
-- image_path: /gallery/Research/adap_network.png
-caption: Overview
-copyright: © minisal
-- image_path: /gallery/Research/adap_results.png
-caption: Results
-copyright: © minisal
+ - image_path: /gallery/Research/adap_model.png
+   caption: Module
+   copyright: © minisal
+ - image_path: /gallery/Research/adap_network.png
+   caption: Overview
+   copyright: © minisal
+ - image_path: /gallery/Research/adap_results.png
+   caption: Results
+   copyright: © minisal
 anydoor_images:
-- image_path: /gallery/Research/anydoor_teaser.png
-caption: Teasor
-copyright: © minisal
-- image_path: /gallery/Research/anydoor_results_vis.png
-caption: Quality Results
-copyright: © minisal
-- image_path: /gallery/Research/anydoor_results.png
-caption: Quantity Results
-copyright: © minisal
+ - image_path: /gallery/Research/anydoor_teaser.png
+   caption: Teasor
+   copyright: © minisal
+ - image_path: /gallery/Research/anydoor_results_vis.png
+   caption: Quality Results
+   copyright: © minisal
+ - image_path: /gallery/Research/anydoor_results.png
+   caption: Quantity Results
+   copyright: © minisal
 ---
 
 <html class="no-js" lang="en">
 <head>
-    <meta content="charset=utf-8">
+	<meta content="charset=utf-8">
 </head>
 
-<body>
+    <body>
 
-<section id="content" role="main">
-    <div class="wrapper">
-        <br><br>
-        <h2>CeRF</h2>
-        <h2>
-            Convolutional Neural Radiance Fields for New View Synthesis with
-            Derivatives of Ray Modeling
-        </h2>
-        <p>
-            Submit to Neurips 2023 - First author
-            <a href="https://arxiv.org/abs/2307.07125">
-                arxiv
-                <span class="fa-stack fa-lg">
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>CeRF</h2>
+      <h2>
+        Convolutional Neural Radiance Fields for New View Synthesis with
+          Derivatives of Ray Modeling
+      </h2>
+      <p>
+        Submit to Neurips 2023 - First author
+          <a href="https://arxiv.org/abs/2307.07125">
+              arxiv
+          <span class="fa-stack fa-lg">
             <!-- <i class="fa fa-circle fa-stack-2x"></i>-->
              <i class="fa fa-file-pdf"></i>
           </span>
-            </a>
-        </p>
-        <p>
-            In recent years, novel view synthesis has gained popularity in
-            generating high-fidelity images. While demonstrating superior
-            performance in the task of synthesizing novel views, the majority of
-            these methods are still based on the conventional multi-layer perceptron
-            for scene embedding. Furthermore, light field models suffer from
-            geometric blurring during pixel rendering, while radiance field-based
-            volume rendering methods have multiple solutions for a certain target of
-            density distribution integration. To address these issues, we introduce
-            the Convolutional Neural Radiance Fields to model the derivatives of
-            radiance along rays. Based on 1D convolutional operations, our proposed
-            method effectively extracts potential ray representations through a
-            structured neural network architecture. Besides, with the proposed ray
-            modeling, a proposed recurrent module is employed to solve geometric
-            ambiguity in the fully neural rendering process. Extensive experiments
-            demonstrate the promising results of our proposed model compared with
-            existing state-of-the-art methods.
-        </p>
+          </a>
+                </p>
+                <p>
+                  In recent years, novel view synthesis has gained popularity in
+                  generating high-fidelity images. While demonstrating superior
+                  performance in the task of synthesizing novel views, the majority of
+                  these methods are still based on the conventional multi-layer perceptron
+                  for scene embedding. Furthermore, light field models suffer from
+                  geometric blurring during pixel rendering, while radiance field-based
+                  volume rendering methods have multiple solutions for a certain target of
+                  density distribution integration. To address these issues, we introduce
+                  the Convolutional Neural Radiance Fields to model the derivatives of
+                  radiance along rays. Based on 1D convolutional operations, our proposed
+                  method effectively extracts potential ray representations through a
+                  structured neural network architecture. Besides, with the proposed ray
+                  modeling, a proposed recurrent module is employed to solve geometric
+                  ambiguity in the fully neural rendering process. Extensive experiments
+                  demonstrate the promising results of our proposed model compared with
+                  existing state-of-the-art methods.
+                  </p>
 
 
-        <!-- Gallery __-->
-        <div class="gallery masonry-gallery">
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
 
-            {% for image in page.images %}
+{% for image in page.images %}
 
-            <figure class="gallery-item">
-                <header class='gallery-icon'>
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
 
-                    <a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup"
-                       title="{{ image.caption }}" data-caption="{{ image.copyright }}">
-                        <img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
 
-                </header>
-                <figcaption class='gallery-caption'>
-                    <div class="entry-summary">
-                        <h3>{{image.caption}}</h3>
-                        <p>{{image.copyright}}</p>
-                    </div>
-                </figcaption>
-            </figure>
+					</header>
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
 
-            {% endfor %}
+{% endfor %}
 
-        </div>
+			</div>
 
-    </div><!-- END .wrapper -->
+		</div><!-- END .wrapper -->
 
-    <div class="wrapper">
-        <br><br>
-        <h2>AnyDoor-NeRF</h2>
-        <h2>
-            An Efficient and Hierarchical Framework for Large Extended Indoor Scene
-        </h2>
-        <p>
-            Submit to 3DV 2024 - First author
-        </p>
-        <p>
-            Neural implicit representations have made significant advancements in rendering new views.
-            However, the dynamic loading of NeRF has remained less explored.
-            Despite the tremendous practical benefits, loading large scenes poses a grand challenge to
-            efficient scene representation and memory requirements.
-            In this paper, we propose a novel framework named AnyDoor-NeRF for the dynamic loading of
-            large extended indoor scenes. Specifically, we introduce a hierarchical sparse voxel representation
-            to model the scenes. With such an adaptive design, our method is able to partition large scenes
-            into different levels for fast modeling with less memory cost. Furthermore, the partitioned scene
-            can be dynamically loaded and joined for a better immersive experience.
-            Quantitative and qualitative results on the ScanNet datasets show the effectiveness of AnyDoor-NeRF,
-            which requires only about 5% training steps and about 70% GPU memory cost compared with NeRFusion.
-        </p>
-
-
-        <!-- Gallery __-->
-        <div class="gallery masonry-gallery">
-
-            {% for image in page.anydoor_images %}
-
-            <figure class="gallery-item">
-                <header class='gallery-icon'>
-
-                    <a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup"
-                       title="{{ image.caption }}" data-caption="{{ image.copyright }}">
-                        <img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
-
-                </header>
-                <figcaption class='gallery-caption'>
-                    <div class="entry-summary">
-                        <h3>{{image.caption}}</h3>
-                        <p>{{image.copyright}}</p>
-                    </div>
-                </figcaption>
-            </figure>
-
-            {% endfor %}
-
-        </div>
-
-    </div><!-- END .wrapper -->
+        <div class="wrapper">
+            <br><br>
+            <h2>AnyDoor-NeRF</h2>
+            <h2>
+                An Efficient and Hierarchical Framework for Large Extended Indoor Scene
+            </h2>
+            <p>
+                Submit to 3DV 2024 - First author
+            </p>
+            <p>
+                Neural implicit representations have made significant advancements in rendering new views.
+                However, the dynamic loading of NeRF has remained less explored.
+                Despite the tremendous practical benefits, loading large scenes poses a grand challenge to
+                efficient scene representation and memory requirements.
+                In this paper, we propose a novel framework named AnyDoor-NeRF for the dynamic loading of
+                large extended indoor scenes. Specifically, we introduce a hierarchical sparse voxel representation
+                to model the scenes. With such an adaptive design, our method is able to partition large scenes
+                into different levels for fast modeling with less memory cost. Furthermore, the partitioned scene
+                can be dynamically loaded and joined for a better immersive experience.
+                Quantitative and qualitative results on the ScanNet datasets show the effectiveness of AnyDoor-NeRF,
+                which requires only about 5% training steps and about 70% GPU memory cost compared with NeRFusion.
+            </p>
 
 
-    <div class="wrapper">
-        <br><br>
-        <h2>AdapMVSNet</h2>
-        <h2>
-            Efficient Multi-View Stereo with Adaptive Convolution and
-            Attention Fusion
-        </h2>
-        <p>
-            Pengfei Jiang, <u>Xiaoyan Yang</u>, Yuanjie Chen, Wenjie Song, Yang Li
-        </p>
+            <!-- Gallery __-->
+            <div class="gallery masonry-gallery">
+
+                {% for image in page.anydoor_images %}
+
+                <figure class="gallery-item">
+                    <header class='gallery-icon'>
+
+                        <a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+                            <img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+
+                    </header>
+                    <figcaption class='gallery-caption'>
+                        <div class="entry-summary">
+                            <h3>{{image.caption}}</h3>
+                            <p>{{image.copyright}}</p>
+                        </div>
+                    </figcaption>
+                </figure>
+
+                {% endfor %}
+
+            </div>
+
+        </div><!-- END .wrapper -->
+
+
+        <div class="wrapper">
+	<br><br>
+			<h2>AdapMVSNet</h2>
+      <h2>
+        Efficient Multi-View Stereo with Adaptive Convolution and
+          Attention Fusion
+                </h2>
+      <p>
+          Pengfei Jiang, <u>Xiaoyan Yang</u>, Yuanjie Chen, Wenjie Song, Yang Li
+      </p>
         CAD&CG 2023 oral
 
-        <a href="https://github.com/HDjpf/AdaptMVSNet">
+      <a href="https://github.com/HDjpf/AdaptMVSNet">
           <span class="fa-stack fa-lg">
              <i class="fa fa-circle fa-stack-2x"></i>
              <i class="fa fa-github fa-stack-1x fa-inverse"></i>
           </span>
-        </a>
-        </p>
-        <p>
-            Multi-View Stereo is a crucial technique for reconstructing the geometric structure of a scene, given the
-            known camera parameters. Previous deep learning-based MVS methods have mainly focused on improving the
-            reconstruction quality but overlooked the running efficiency during the actual algorithm deployment.
-            For example, deformable convolutions have been introduced to improve the accuracy of the reconstruction
-            results further, however, its inability for parallel optimization caused low inference speed.
-            In this paper, we propose AdaptMVSNet which is device-friendly and reconstruction-efficient, while
-            preserving the original results.
-            To this end, adaptive convolution is introduced to significantly improve the efficiency in speed and metrics
-            compared to current methods.
-            In addition, an attention fusion module is proposed to blend features from adaptive convolution and the
-            feature pyramid network.
-            Our experiments demonstrate that our proposed approach achieves state-of-the-art performance and is almost
-            2x faster than the recent fastest MVS method.
-        </p>
+      </a>
+                </p>
+                <p>
+Multi-View Stereo is a crucial technique for reconstructing the geometric structure of a scene, given the known camera parameters. Previous deep learning-based MVS methods have mainly focused on improving the reconstruction quality but overlooked the running efficiency during the actual algorithm deployment.
+For example, deformable convolutions have been introduced to improve the accuracy of the reconstruction results further, however, its inability for parallel optimization caused low inference speed.
+In this paper, we propose AdaptMVSNet which is device-friendly and reconstruction-efficient, while preserving the original results.
+To this end, adaptive convolution is introduced to significantly improve the efficiency in speed and metrics compared to current methods.
+In addition, an attention fusion module is proposed to blend features from adaptive convolution and the feature pyramid network.
+Our experiments demonstrate that our proposed approach achieves state-of-the-art performance and is almost 2x faster than the recent fastest MVS method.
+                </p>
 
 
-        <!-- Gallery __-->
-        <div class="gallery masonry-gallery">
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
 
-            {% for image in page.adap_images %}
+{% for image in page.adap_images %}
 
-            <figure class="gallery-item">
-                <header class='gallery-icon'>
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
 
-                    <a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup"
-                       title="{{ image.caption }}" data-caption="{{ image.copyright }}">
-                        <img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
 
-                </header>
-                <figcaption class='gallery-caption'>
-                    <div class="entry-summary" id="{{ image.caption }}">
-                        <h3>{{image.caption}}</h3>
-                        <p>{{image.copyright}}</p>
-                    </div>
-                </figcaption>
-            </figure>
+					</header>
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary" id="{{ image.caption }}">
+							<h3>{{image.caption}}</h3>
+							<p>{{image.copyright}}</p>
+						</div>
+					</figcaption>
+				</figure>
 
-            {% endfor %}
+{% endfor %}
 
-        </div>
+			</div>
 
-    </div><!-- END .wrapper -->
+		</div><!-- END .wrapper -->
 
-    <br>
-    <br>
-    <h2>Realtime Reconstruction Demo</h2>
-    <figure class="gallery-item">
-        <header class='gallery-icon'>
-            <video src="{{ site.url }}{{ site.baseurl }}/gallery/Research/recon_demo.mov" autoplay loop controls
-                   style="width: 100%;"></video>
-        </header>
-        <figcaption class='gallery-caption'>
-            <div class="entry-summary" id="recon_demo">
-                <h3>Recon Demo</h3>
-                <p> © minisal </p>
-            </div>
-        </figcaption>
-    </figure>
-    <br>
-    <br>
-    <h2
-    >Nerf & MVS Presentation</h2>
-    <iframe src="//player.bilibili.com/player.html?aid=270220311&bvid=BV1pc411H7J5&cid=1102401229&page=1" scrolling="no"
-            border="0" frameborder="no" framespacing="0" allowfullscreen="true" controls style="width: 100%;"></iframe>
-</section>
+        <br>
+        <br>
+        <h2>Realtime Reconstruction Demo</h2>
+        <figure class="gallery-item">
+            <header class='gallery-icon'>
+                <video src="{{ site.url }}{{ site.baseurl }}/gallery/Research/recon_demo.mov" autoplay loop controls style="width: 100%;"></video>
+            </header>
+            <figcaption class='gallery-caption'>
+                <div class="entry-summary" id="recon_demo">
+                    <h3>Recon Demo</h3>
+                    <p> © minisal </p>
+                </div>
+            </figcaption>
+        </figure>
+        <br>
+        <br>
+        <h2
+        >Nerf & MVS Presentation</h2>
+        <iframe src="//player.bilibili.com/player.html?aid=270220311&bvid=BV1pc411H7J5&cid=1102401229&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" controls style="width: 100%;"> </iframe>
+    </section>
 
 <!-- jQuery -->
 
@@ -264,26 +252,25 @@ copyright: © minisal
 <!-- include custom script -->
 <script src="{{ site.baseurl }}/js/scripts.js"></script>
 <!-- Modernizr -->
-<script src="{{ site.baseurl }}/js/modernizr.js"></script>
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
 
-<script type="text/javascript">
-    $(document).ready(function ($) {
+    <script type="text/javascript">
+      $(document).ready(function($) {
         $('a.popup').magnificPopup({
-            type: 'image',
-            gallery: {
-                enabled: true,
-                navigateByImgClick: true,
-                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-            },
-            image: {
-                titleSrc: function (item) {
-                    return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
-                }
+          type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+      image: {
+         titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
             }
-            // other options
-        });
-    });
-</script>
+        }
+          // other options
+      });
+});
+    </script>
 
-</body>
-</html>
+</body></html>
