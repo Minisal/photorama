@@ -79,10 +79,18 @@ images:
    caption: Antiquity
    copyright: © minisal
 
-videos:
+ani_videos:
  - image_path: /gallery/MidJourney/FishGirl.mov
    caption: MJ + Unity
    copyright: © minisal
+ - image_path: /gallery/MidJourney/animation/animate_1.mov
+   caption: Animation
+   copyright: © minisal
+ - image_path: /gallery/MidJourney/animation/animate_2.mov
+   caption: Animation
+   copyright: © minisal
+
+videos:
  - image_path: /gallery/MidJourney/pika/pika_1.mov
    caption: Pika - walking
    copyright: © minisal
@@ -169,7 +177,31 @@ images_sd:
 		<div class="wrapper">
     <br><br>
 
-            <h2>Guidance Generation</h2>
+            <h2>Animation</h2>
+            <!-- Gallery __-->
+            <div class="gallery masonry-gallery">
+
+                {% for video in page.ani_videos %}
+
+                <figure class="gallery-item">
+                    <header class='gallery-icon'>
+
+                        <video href="{{ site.url }}{{ site.baseurl }}{{ video.image_path }}" autoplay loop controls style="width: 100%;"></video>
+
+                    </header>
+                    <figcaption class='gallery-caption'>
+                        <div class="entry-summary" id="{{ video.caption }}">
+                            <h3>{{video.caption}}</h3>
+                            <p>{{video.copyright}}</p>
+                        </div>
+                    </figcaption>
+                </figure>
+
+                {% endfor %}
+
+            </div>
+
+            <h2>Video Generation</h2>
             <!-- Gallery __-->
             <div class="gallery masonry-gallery">
 
@@ -178,7 +210,7 @@ images_sd:
                 <figure class="gallery-item">
                     <header class='gallery-icon'>
 
-                        <video href="{{ site.url }}{{ site.baseurl }}{{ video.image_path }}" autoplay loop controls></video>
+                        <video href="{{ site.url }}{{ site.baseurl }}{{ video.image_path }}" autoplay loop controls style="width: 100%;"></video>
 
                     </header>
                     <figcaption class='gallery-caption'>
