@@ -78,7 +78,6 @@ images:
  - image_path: /gallery/MidJourney/mj/6.png
    caption: Antiquity
    copyright: © minisal
-
 videos:
  - image_path: /gallery/MidJourney/FishGirl.mov
    caption: MJ + Unity
@@ -108,8 +107,6 @@ videos:
    caption: Pika: religious
    copyright: © minisal
    madedate: 2023-08-25
-
-
 images_sd:
  - image_path: /gallery/MidJourney/ip2p/ip2p_1.png
    caption: Anime
@@ -157,7 +154,7 @@ images_sd:
 	<meta content="charset=utf-8">
 </head>
 
-    <body>
+	<body>
 
 	<section id="content" role="main">
 <!--        <h2>Video Generation</h2>-->
@@ -173,57 +170,57 @@ images_sd:
 <!--                </div>-->
 <!--            </figcaption>-->
 <!--        </figure>-->
-        <div class="wrapper">
+		<div class="wrapper">
 
-            <h2>Guidance Generation</h2>
+			<h2>Guidance Generation</h2>
             <!-- Gallery __-->
-            <div class="gallery masonry-gallery">
+			<div class="gallery masonry-gallery">
 
-                {% for video in page.videos %}
+{% for video in page.videos %}
 
-                <figure class="gallery-item">
-                    <header class='gallery-icon'>
-                        <video src="{{ site.url }}{{ site.baseurl }}{{ video.image_path }}" autoplay loop controls>
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+							<video src="{{ site.url }}{{ site.baseurl }}{{ video.image_path }}" autoplay loop controls>
                             </video>
-                    </header>
-                    <figcaption class='gallery-caption'>
-                        <div class="entry-summary" id="{{ video.caption }}">
-                            <h3>{{video.caption}}</h3>
-                        </div>
-                    </figcaption>
-                </figure>
+					</header>
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary" id="{{ video.caption }}">
+							<h3>{{video.caption}}</h3>
+						</div>
+					</figcaption>
+				</figure>
 
-                {% endfor %}
+{% endfor %}
 
-            </div>
+			</div>
 
 
-            <br><br>
+			<br><br>
 			<h2>Guidance Generation</h2>
 			<!-- Gallery __-->
 			<div class="gallery masonry-gallery">
 
-        {% for image in page.images_sd %}
+{% for image in page.images_sd %}
 
-                <figure class="gallery-item">
-                  <header class='gallery-icon'>
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
 
-        <a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }}">
-        <img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+		<a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+		<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
 
-                  </header>
-                  <figcaption class='gallery-caption'>
-                    <div class="entry-summary" id="{{ image.caption }}">
-                      <h3>{{image.caption}}</h3>
-                    </div>
-                  </figcaption>
-                </figure>
+				</header>
+				<figcaption class='gallery-caption'>
+					<div class="entry-summary" id="{{ image.caption }}">
+						<h3>{{image.caption}}</h3>
+					</div>
+				</figcaption>
+				</figure>
 
-        {% endfor %}
+{% endfor %}
 
-              </div>
+				</div>
 
-            <h2>Image Generation</h2>
+			<h2>Image Generation</h2>
 			<!-- Gallery __-->
 			<div class="gallery masonry-gallery">
 
