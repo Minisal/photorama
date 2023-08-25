@@ -84,17 +84,41 @@ videos:
   caption: MJ + Unity
   copyright: © minisal
   madedate: 2023-04-19
+- image_path: /gallery/MidJourney/pika/pika_1.mov
+  caption: Pika: walking
+  copyright: © minisal
+  madedate: 2023-08-25
+- image_path: /gallery/MidJourney/pika/pika_2.mov
+  caption: Pika: light spark
+  copyright: © minisal
+  madedate: 2023-08-25
+- image_path: /gallery/MidJourney/pika/pika_3.mov
+  caption: Pika: wings fluttering
+  copyright: © minisal
+  madedate: 2023-08-25
+- image_path: /gallery/MidJourney/pika/pika_4.mov
+  caption: Pika: every thing move
+  copyright: © minisal
+  madedate: 2023-08-25
+- image_path: /gallery/MidJourney/pika/pika_5.mov
+  caption: Pika: love story
+  copyright: © minisal
+  madedate: 2023-08-25
+- image_path: /gallery/MidJourney/pika/pika_6.mov
+  caption: Pika: religious
+  copyright: © minisal
+  madedate: 2023-08-25
 
 
 images_sd:
  - image_path: /gallery/MidJourney/sd/style_drop_1.png
-   caption: Init
+   caption: Style Drop
    copyright: © minisal
  - image_path: /gallery/MidJourney/sd/style_drop_2.png
-   caption: Pose
+   caption: Style Drop
    copyright: © minisal
  - image_path: /gallery/MidJourney/sd/style_drop_3.png
-   caption: Coser
+   caption: Style Drop
    copyright: © minisal
  - image_path: /gallery/MidJourney/sd/init.png
    caption: Init
@@ -132,11 +156,30 @@ images_sd:
             </figcaption>
         </figure>
 
+        <h2> MidJouney</h2>
+        <!-- Gallery __-->
+        <div class="gallery masonry-gallery">
+
+            {% for video in page.videos %}
+
+            <figure class="gallery-item">
+                <header class='gallery-icon'>
+                    <video src="{{ site.url }}{{ site.baseurl }}{{ video.image_path }}" autoplay loop controls>
+                        </video>
+                </header>
+                <figcaption class='gallery-caption'>
+                    <div class="entry-summary" id="{{ video.caption }}">
+                        <h3>{{video.caption}}</h3>
+                    </div>
+                </figcaption>
+            </figure>
+
+            {% endfor %}
+
+        </div>
+
 		<div class="wrapper">
     <br><br>
-
-
-
 			<h2>Stable Diffusion</h2>
 			<!-- Gallery __-->
 			<div class="gallery masonry-gallery">
@@ -153,7 +196,6 @@ images_sd:
                   <figcaption class='gallery-caption'>
                     <div class="entry-summary" id="{{ image.caption }}">
                       <h3>{{image.caption}}</h3>
-                      <p>{{image.copyright}}</p>
                     </div>
                   </figcaption>
                 </figure>
@@ -178,7 +220,6 @@ images_sd:
 					<figcaption class='gallery-caption'>
 						<div class="entry-summary" id="{{ image.caption }}">
 							<h3>{{image.caption}}</h3>
-							<p>{{image.copyright}}</p>
 						</div>
 					</figcaption>
 				</figure>
