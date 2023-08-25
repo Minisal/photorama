@@ -173,19 +173,19 @@ images_sd:
             <!-- Gallery __-->
             <div class="gallery masonry-gallery">
 
-                {% for image in page.images_sd %}
+                {% for video in page.videos %}
 
                 <figure class="gallery-item">
                     <header class='gallery-icon'>
 
-                        <a href="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="{{ image.copyright }}">
-                            <img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
+                        <a href="{{ site.url }}{{ site.baseurl }}{{ video.image_path }}" class="popup"  title="{{ video.caption }}" data-caption="{{ video.copyright }}">
+                            <img src="{{ site.url }}{{ site.baseurl }}{{ video.image_path }}"></a>
 
                     </header>
                     <figcaption class='gallery-caption'>
-                        <div class="entry-summary" id="{{ image.caption }}">
-                            <h3>{{image.caption}}</h3>
-                            <p>{{image.copyright}}</p>
+                        <div class="entry-summary" id="{{ video.caption }}">
+                            <h3>{{video.caption}}</h3>
+                            <p>{{video.copyright}}</p>
                         </div>
                     </figcaption>
                 </figure>
